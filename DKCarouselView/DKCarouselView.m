@@ -401,7 +401,7 @@ typedef void(^DKCarouselViewTapBlock)();
     if (scrollView.isDragging) { 
         self.autoPagingTimer.fireDate = [NSDate dateWithTimeIntervalSinceNow:self.autoPagingTimer.timeInterval];
         
-        if (self.carouselItemViews.count == 2) {
+       /* if (self.carouselItemViews.count == 2) {
             if (scrollView.contentOffset.x < kScrollViewFrameWidth) {
                 UIView *previousView = self.carouselItemViews[GetPreviousIndex()];
                 if (!CGRectEqualToRect(CGRectMake(0, 0, kScrollViewFrameWidth, kScrollViewFrameHeight), previousView.frame)) {
@@ -413,7 +413,7 @@ typedef void(^DKCarouselViewTapBlock)();
                     [self insertNextPage];
                 }
             }
-        }
+        }*/
         
         if (self.didScrollBlock != nil) {
             self.didScrollBlock(self, scrollView.contentOffset.x);
